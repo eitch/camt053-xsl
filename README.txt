@@ -5,7 +5,6 @@ Introduction
 This project provides some XSL files for working with bank statements
 published using the camt 053 XML file format.
 
- * camt2pdf.xsl converts the bank statement to a PDF for printing
  * camt2csv.xsl converts the bank statement to a CSV file for
    use with a spreadsheet
 
@@ -23,11 +22,7 @@ The xsltproc utility transforms the bank statement into an XSL-FO XML file
 describing the print layout.  The fop utility transforms the XSL-FO file
 into PDF or another output format (see the man page for details).
 
-Here is an example of how to generate a PDF:
-
-  $ xsltproc camt2pdf.xsl statement.xml | fop - statement.pdf
-
-and here is an example to convert camt 053 to CSV:
+Here is an example to convert camt 053 to CSV:
 
   $ xsltproc camt2csv.xsl statement.xml > statement.csv
 
