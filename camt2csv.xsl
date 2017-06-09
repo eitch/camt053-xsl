@@ -24,7 +24,7 @@
 	<xsl:variable name="info" select="camt:AddtlNtryInf" />
 
 	<xsl:for-each select="camt:NtryDtls/camt:TxDtls">
-		<xsl:copy-of select="$bookingDate"/>,<xsl:copy-of select="$valDate"/>,"<xsl:copy-of select="$ref"/>","<xsl:value-of select="camt:Refs/camt:AcctSvcrRef"/>","<xsl:value-of select="camt:RmtInf/camt:Ustrd"/>",<xsl:if test="camt:CdtDbtInd = 'DBIT'">-</xsl:if><xsl:value-of select="camt:Amt"/>,"<xsl:copy-of select="$info"/>"<xsl:text>&#xD;&#xA;</xsl:text>
+		<xsl:copy-of select="$bookingDate"/>,<xsl:copy-of select="$valDate"/>,"<xsl:copy-of select="$ref"/>","<xsl:value-of select="camt:Refs/camt:AcctSvcrRef"/>","<xsl:value-of select="camt:Refs/camt:InstrId"/>","<xsl:value-of select="camt:RmtInf/camt:Ustrd"/>",<xsl:if test="camt:CdtDbtInd = 'DBIT'">-</xsl:if><xsl:value-of select="camt:Amt"/>,"<xsl:copy-of select="$info"/>"<xsl:text>&#xD;&#xA;</xsl:text>
 	</xsl:for-each>
 
 </xsl:for-each>
